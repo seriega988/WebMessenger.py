@@ -20,9 +20,9 @@ class UserBase:
     def __init__(self, window):
         self.window = window
         self.__db_path = None
-        Path("C:\\IcViborWeb").mkdir(parents=True,exist_ok=True)
+        Path("C:\\WebMess").mkdir(parents=True,exist_ok=True)
         self.engine = None
-        self.__db_path = Path("C:\\IcViborWeb",self.filename)
+        self.__db_path = Path("C:\\WebMess",self.filename)
         sqlite3.connect(self.__db_path)
         self.engine = create_engine(f'sqlite:///{self.__db_path}')
         self.session = Session(bind=self.engine)
