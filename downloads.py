@@ -134,7 +134,7 @@ class Downloads(QObject):
         notification.notify(
             title=state['notify_title'],
             message=item.path,
-            app_name='Devoud',
+            app_name='Python',
         )
         item.request.deleteLater()
         del item.request
