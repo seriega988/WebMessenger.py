@@ -87,6 +87,10 @@ class WebBrowser(QMainWindow):
         wapp_but.triggered.connect(lambda:self.Whatsapp(QUrl("https://web.whatsapp.com/"),"Whatsapp"))
         toolbar.addAction(wapp_but)
 
+        btrx_but = QAction(QIcon("Bitrix24.ico"),'Bitrix',self)
+        btrx_but.triggered.connect(lambda:self.add_new_tab(QUrl("https://b24-qr3551.bitrix24.ru/shop/orders/kanban/"),"Bitrix"))
+        toolbar.addAction(btrx_but)
+
 
 
         if profile is None:
